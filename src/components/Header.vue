@@ -5,16 +5,13 @@
         <img src="../assets/img/dc-logo.png" alt="Logo-DC" />
         <nav>
           <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">Tv</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Collectibles</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Fans</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Shop</a></li>
+            <li
+              v-for="(link, i) in links"
+              :key="i"
+              :class="link.visible ? 'active' : ''"
+            >
+              <a :href="link.url">{{ link.text }}</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -24,6 +21,62 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      links: [
+        {
+          text: "CHARACTERS",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "COMICS",
+          url: "#",
+          visible: true,
+        },
+        {
+          text: "MOVIES",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "TV",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "GAMES",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "COLLECTIBLES",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "VIDEOS",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "FANS",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "NEWS",
+          url: "#",
+          visible: false,
+        },
+        {
+          text: "SHOP",
+          url: "#",
+          visible: false,
+        },
+      ],
+    };
+  },
 };
 </script>
 <style lang="scss" scoped>
