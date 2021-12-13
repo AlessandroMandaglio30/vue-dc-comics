@@ -32,6 +32,7 @@ header {
   margin-top: 20px;
   text-align: center;
   display: flex;
+  margin-bottom: 20px;
 }
 .header-cont {
   width: 80%;
@@ -40,9 +41,12 @@ header {
 .logo {
   margin-left: 50px;
   display: flex;
+  img {
+    height: 70px;
+  }
 }
 nav {
-  margin-top: 20px;
+  margin-top: 10px;
   // nav ul {}
   ul {
     margin-left: 60%;
