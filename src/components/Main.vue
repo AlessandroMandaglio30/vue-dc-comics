@@ -1,26 +1,21 @@
 <template>
-  <div class="main">
-    <div class="main-cont">--&gt; Content goes here &lt;--</div>
-  </div>
+  <main>
+    <Hero />
+  </main>
 </template>
 
 <script>
+import Hero from "../components/Hero.vue";
 export default {
   name: "Main",
+  components: {
+    Hero,
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-@import "../assets/style/partials/variables.scss";
-.main {
-  height: 150px;
+<style scoped lang="scss">
+main {
   background-color: #1c1c1c;
-  .main-cont {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 22px;
-    color: #fff;
-    padding: 60px 0;
-  }
 }
-</style> 
+</style>
