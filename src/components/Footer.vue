@@ -208,7 +208,7 @@ nav {
   color: white;
   .container {
     width: 80%;
-    height: 400px;
+    height: 650px;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
@@ -216,6 +216,7 @@ nav {
     .link-cont {
       padding: 30px 0;
       display: flex;
+      align-items: center;
       * {
         margin-right: 20px;
       }
