@@ -4,7 +4,7 @@
       <div class="container">
         <div class="link-cont">
           <div>
-            <ul>
+            <ul class="dc">
               <h3>DC COMICS</h3>
               <li v-for="(link, i) in dcComicsLinks" :key="i">
                 <a :href="link.url">{{ link.text }}</a>
@@ -23,7 +23,7 @@
               <a :href="link.url">{{ link.text }}</a>
             </li>
           </ul>
-          <ul>
+          <ul class="sites">
             <h3>SITES</h3>
             <li v-for="(link, i) in sitesLinks" :key="i">
               <a :href="link.url">{{ link.text }}</a>
@@ -232,11 +232,17 @@ nav {
           }
         }
       }
+      .dc {
+        margin-bottom: 25px;
+      }
+      .sites {
+        margin-bottom: 152px;
+      }
     }
     img {
       height: 150%;
       object-fit: cover;
-      transform: translate(0, -20%);
+      transform: translate(0, -22%);
     }
   }
 }
